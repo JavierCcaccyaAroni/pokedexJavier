@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Métodos de Arreglos</h1>
+    <h3>1.- forEach</h3>
+
+    <script>
+        // Arreglo de Objetos
+        let personas = [
+            {nombre: "Boris", hobby:"correr", salario: 2000},
+            {nombre: "Luis", hobby:"cantar", salario: 1500},
+            {nombre: "Carmen", hobby:"cocina", salario: 800},
+            {nombre: "Percy", hobby:"cantar", salario: 1100},
+            {nombre: "Rosa", hobby:"leer", salario: 3000}
+        ];
+
+        // forEach
+        personas.forEach((persona, index) => {
+            // console.log(persona.nombre , index);
+        })
+
+        // map()
+        let newList = personas.map((persona) => "HOla " + persona.nombre);
+        console.log(newList);
+
+        // filter()
+        let newList2 = personas.filter((persona) => persona.hobby === "cantar");
+        console.log(newList2);
+
+        // find()
+        let x = personas.find((persona) => persona.hobby === "cantar");
+        console.log(x);
+
+    </script>
+</body>
+</html>
